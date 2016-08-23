@@ -1,0 +1,21 @@
+{
+  "name": "myapp",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Peter Lee"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "python",
+    "flask"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
