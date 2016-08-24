@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+   
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+   
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'lib/bootstrap/dist/css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/app.css' %}">
+{% block custom_style %}  {% endblock %}
+</head>
+<!-- Set render engine for 360 browser -->
+<meta name="renderer" content="webkit">
+
+<!-- No Baidu Siteapp-->
+<meta http-equiv="Cache-Control" content="no-siteapp"/>
+   
+<body>
+<div class="container">
+        <h3>{% block headTitle %}{% endblock %}</h3>
+</div>
+ <div class="container">
+        {% block content %}  {% endblock %}
+ </div>
+        {% block footer %}
+               
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted">中青建投 2016</p>
+        </div>
+    </footer>
+        {% endblock %}
+<script src="{% static 'lib/jquery/dist/jquery.min.js' %}"></script>
+   
+<script src="{% static 'lib/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+{% block custom_script %}  {% endblock %}
+</body>
+</html>

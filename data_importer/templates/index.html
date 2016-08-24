@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}首页{% endblock %}
+
+
+<h3>{% block headTitle %}欢迎您访问本网站{% endblock %}</h3>
+
+{% block content %}
+<p>中青信投数据导入系统!</p>
+{% endblock %}
+{% block custom_script %}
+<script>
+   $(document).ready(function(){
+      jQuery.post('/json_test',JSON.stringify({a:100,b:2}),function(data){
+          console.log(data);
+       },'json');
+   });
+</script>
+{% endblock %}
