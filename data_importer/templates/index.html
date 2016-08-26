@@ -1,12 +1,24 @@
 {% extends "base.html" %}
-
+{% spaceless %}
 {% block title %}首页{% endblock %}
 
-
-<h3>{% block headTitle %}欢迎您访问本网站{% endblock %}</h3>
-
+{% block myStyle %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
 {% block content %}
-<p>中青信投数据导入系统!</p>
+    <div class="jumbotron masthead">
+      <div class="container-fluid">
+        <h1>欢迎您访问本网站</h1>
+        <h2>志愿者信用数据导入</h2>
+        <p class="masthead-button-links">
+          <a class="btn btn-lg btn-primary btn-shadow"
+             href="" target="_blank" role="button">开始导入</a>
+        </p>
+        <ul class="masthead-links">
+        </ul>
+      </div>
+    </div>
 {% endblock %}
 {% block custom_script %}
 <script>
@@ -17,3 +29,4 @@
    });
 </script>
 {% endblock %}
+{% endspaceless %}

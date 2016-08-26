@@ -1,0 +1,8 @@
+@import "vars";
+.masthead{
+    text-align: center;
+    background-color: $theme_color ;
+    background-image: url("../img/mhead-bg.png");
+    color: #ffffff;
+    border-radius:0 !important;
+}

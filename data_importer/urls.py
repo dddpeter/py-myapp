@@ -16,11 +16,13 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from django.contrib.auth import views
-from . import views as local_views
+from views import index_views
+from views import information_views
 
 urlpatterns = [
-    url(r'^$', local_views.index, name='index'),
-    url(r'^json_test$', local_views.process_json_request, name='json_test'),
+    url(r'^$', index_views.index, name='index'),
+    url(r'^json_test$', index_views.process_json_request, name='json_test'),
+    url(r'^information_json$', information_views.information_json, name='information_json'),
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/login/$', views.login, {'template_name': 'admin/login.html'})
 ]

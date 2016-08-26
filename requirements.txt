@@ -1,2 +1,4 @@
 simplejson
 django
+pymongo
+bson

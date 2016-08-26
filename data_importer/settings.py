@@ -1,3 +1,4 @@
+# -- coding:utf-8 --
 """
 Django settings for data_importer project.
 
@@ -73,18 +74,23 @@ WSGI_APPLICATION = 'data_importer.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.mysql',
+#        'HOST': 'localhost',
+#        'NAME': 'pyapp',
+#        'PORT': '3306',
+#        'USER': 'root',
+#        'PASSWORD': 'ljd12345',
+#        'TIME_ZONE': 'Asia/Shanghai'
+#    }
+#}
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'HOST': 'localhost',
-        'NAME': 'pyapp',
-        'PORT': '3306',
-        'USER': 'root',
-        'PASSWORD': 'ljd12345',
-        'TIME_ZONE': 'Asia/Shanghai'
-    }
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": os.path.join(BASE_DIR,  'data/importer.db'),
+        }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
@@ -118,6 +124,11 @@ USE_L10N = True
 
 USE_TZ = True
 
+DEFAULT_CHARSET = 'UTF-8'
+# 设置会话的有效期
+SESSION_SAVE_EVERY_REQUEST = True
+# SESSION_COOKIE_AGE = 10 * 60
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
