@@ -16,13 +16,20 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from django.contrib.auth import views
-from views import index_views
+from views import api_views
 from views import information_views
 
 urlpatterns = [
-    url(r'^$', index_views.index, name='index'),
-    url(r'^json_test$', index_views.process_json_request, name='json_test'),
-    url(r'^information_json$', information_views.information_json, name='information_json'),
+    # Front end
+    url(r'^$', api_views.index, name='index'),
+    # CYG APIs
+    url(r'^api/organ$', api_views.organ, name='organ_import'),
+    url(r'^api/user$', api_views.user, name='user_import'),
+    url(r'^api/activity$', api_views.activity, name='activity_import'),
+    url(r'^api/user_activity$', api_views.user_activity, name='user_activity_import'),
+    url(r'^api/user_organ$', api_views.user_organ, name='user_organ_import'),
+
+    # Administrator
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/login/$', views.login, {'template_name': 'admin/login.html'})
 ]
