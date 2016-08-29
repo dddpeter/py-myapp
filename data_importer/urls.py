@@ -17,7 +17,6 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.contrib.auth import views
 from views import api_views
-from views import information_views
 
 urlpatterns = [
     # Front end
