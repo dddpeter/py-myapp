@@ -4,14 +4,14 @@ __author__ = 'lijinde-lhq'
 import xlrd
 from pymongo import MongoClient
 
-#连接数据库
+# 连接数据库
 client = MongoClient('localhost', 27017)
 db = client.mydb
 area = db.area
 
 data = xlrd.open_workbook('d:\\area.xls')
 table = data.sheets()[0]
-#读取excel第一行数据作为存入mongodb的字段名
+# 读取excel第一行数据作为存入mongodb的字段名
 rows_tag = table.row_values(0)
 rows = table.nrows
 print rows

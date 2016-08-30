@@ -40,7 +40,6 @@ def insert(db, collection_name, doc):
 
 def get(db, collection_name, queryJson={}):
     # 有就返回一个，没有就返回None
-    print queryJson;
     if is_json(queryJson):
         coll = db[collection_name]
         result_list = coll.find(queryJson)  # 返回第一条记录
