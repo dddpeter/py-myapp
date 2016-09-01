@@ -43,27 +43,28 @@ def user(request):
     db = mongo_util.get_db('mydb')
     for m in message:
         check_message = ""
-        user_id = m["_id"] = m["vol_ID"]
-        vol_id = m['vol_ID']
-        idcard_number = m['idcard_number']
-        vol_true_name = m['vol_true_name']
-        vol_province = m['vol_province']
-        vol_city = m['vol_city']
-        vol_district = m['vol_district']
-        vol_street = m['vol_street']
-        vol_committee = m['vol_committee']
-        vol_address = m['vol_address']
-        member_group_code = m['member_group_code']
-        post_code = m['post_code']
-        vol_gender = m['vol_gender']
-        vol_birth_year = m['vol_birth_year']
-        vol_birth_month = m['vol_birth_month']
-        vol_birth_day = m['vol_birth_day']
-        vol_birth_date = m['vol_birth_date']
-        vol_ethnicity = m['vol_ethnicity']
-        vol_hour = m['vol_hour']
-        login_mobile = m['login_mobile']
+        user_id = m["vol_ID"]
+
         try:
+            vol_id = m['vol_ID']
+            idcard_number = m['idcard_number']
+            vol_true_name = m['vol_true_name']
+            vol_province = m['vol_province']
+            vol_city = m['vol_city']
+            vol_district = m['vol_district']
+            vol_street = m['vol_street']
+            vol_committee = m['vol_committee']
+            vol_address = m['vol_address']
+            member_group_code = m['member_group_code']
+            post_code = m['post_code']
+            vol_gender = m['vol_gender']
+            vol_birth_year = m['vol_birth_year']
+            vol_birth_month = m['vol_birth_month']
+            vol_birth_day = m['vol_birth_day']
+            vol_birth_date = m['vol_birth_date']
+            vol_ethnicity = m['vol_ethnicity']
+            vol_hour = m['vol_hour']
+            login_mobile = m['login_mobile']
             if not str(vol_id).isdigit():
                 check_message += "志愿者代码格式错误|"
             if not str(idcard_number).strip():
@@ -141,30 +142,30 @@ def organ(request):
     db = mongo_util.get_db('mydb')
     for m in message:
         check_message = ""
-        organ_id = m["_id"] = m["org_ID"]
-        org_id = m["org_ID"]
-        org_parent_name = m["org_parent_name"]
-        org_parent_id = m["org_parent_id"]
-        org_station_flag = m["org_station_flag"]
-        org_linkman = m["org_linkman"]
-        org_linkman_mobile = m["org_linkman_mobile"]
-        org_manager = m["org_manager"]
-        org_manager_cert_number = m["org_manager_cert_number"]
-        org_manager_mobile = m["org_manager_mobile"]
-        org_name = m["org_name"]
-        org_build_date = m["org_build_date"]
-        org_province = m["org_province"]
-        org_city = m["org_city"]
-        org_district = m["org_district"]
-        org_street = m["org_street"]
-        org_committee = m["org_committee"]
-        org_address = m["org_address"]
-        org_hour = str(m["org_hour"])
-        org_member = m["org_member"]
-        org_introduce = m["org_introduce"]
-        create_time = m["create_time"]
-        system_code = str(m["system_code"])
+        organ_id = m["org_ID"]
         try:
+            org_id = m["org_ID"]
+            org_parent_name = m["org_parent_name"]
+            org_parent_id = m["org_parent_id"]
+            org_station_flag = m["org_station_flag"]
+            org_linkman = m["org_linkman"]
+            org_linkman_mobile = m["org_linkman_mobile"]
+            org_manager = m["org_manager"]
+            org_manager_cert_number = m["org_manager_cert_number"]
+            org_manager_mobile = m["org_manager_mobile"]
+            org_name = m["org_name"]
+            org_build_date = m["org_build_date"]
+            org_province = m["org_province"]
+            org_city = m["org_city"]
+            org_district = m["org_district"]
+            org_street = m["org_street"]
+            org_committee = m["org_committee"]
+            org_address = m["org_address"]
+            org_hour = str(m["org_hour"])
+            org_member = m["org_member"]
+            org_introduce = m["org_introduce"]
+            create_time = m["create_time"]
+            system_code = str(m["system_code"])
             if not str(org_id).isdigit():
                 check_message += "组织代码不能为空|"
             if not str(org_parent_id).isdigit():
@@ -247,28 +248,28 @@ def activity(request):
     db = mongo_util.get_db('mydb')
     for m in message:
         check_message = ""
-        activity_id = m["_id"] = m["opp_ID"]
-        opp_id = m["opp_ID"]
-        opp_name = m["opp_name"]
-        org_name = m["org_name"]
-        org_id = m["org_ID"]
-        opp_start_date = m["opp_start_date"]
-        opp_end_date = m["opp_end_date"]
-        opp_lng = m["opp_lng"]
-        opp_lat = m["opp_lat"]
-        opp_linkman = m["opp_linkman"]
-        opp_linkman_mobile = m["opp_linkman_mobile"]
-        opp_linkman_email = m["opp_linkman_email"]
-        opp_province = m["opp_province"]
-        opp_city = m["opp_city"]
-        opp_district = m["opp_district"]
-        opp_street = m["opp_street"]
-        opp_committee = m["opp_committee"]
-        opp_address = m["opp_address"]
-        opp_memo = m["opp_memo"]
-        opp_hour = str(m["opp_hour"])
-        system_code = str(m["system_code"])
+        activity_id  = m["opp_ID"]
         try:
+            opp_id = m["opp_ID"]
+            opp_name = m["opp_name"]
+            org_name = m["org_name"]
+            org_id = m["org_ID"]
+            opp_start_date = m["opp_start_date"]
+            opp_end_date = m["opp_end_date"]
+            opp_lng = m["opp_lng"]
+            opp_lat = m["opp_lat"]
+            opp_linkman = m["opp_linkman"]
+            opp_linkman_mobile = m["opp_linkman_mobile"]
+            opp_linkman_email = m["opp_linkman_email"]
+            opp_province = m["opp_province"]
+            opp_city = m["opp_city"]
+            opp_district = m["opp_district"]
+            opp_street = m["opp_street"]
+            opp_committee = m["opp_committee"]
+            opp_address = m["opp_address"]
+            opp_memo = m["opp_memo"]
+            opp_hour = str(m["opp_hour"])
+            system_code = str(m["system_code"])
             if not str(opp_id).isdigit():
                 check_message += "组织代码不能为空|"
             if not opp_name.strip():
@@ -349,12 +350,12 @@ def user_organ(request):
     db = mongo_util.get_db('mydb')
     for m in message:
         check_message = ""
-        org_id = m["org_ID"]
-        organ_name = m["org_name"]
-        vol_id = m["vol_ID"]
-        system_code = m["system_code"]
-        user_organ_id = m["_id"] = m["org_ID"] + "_" + m["vol_ID"]
+        user_organ_id  = m["org_ID"] + "_" + m["vol_ID"]
         try:
+            org_id = m["org_ID"]
+            organ_name = m["org_name"]
+            vol_id = m["vol_ID"]
+            system_code = m["system_code"]
             if not str(org_id).isdigit():
                 check_message += "机构代码格式错误|"
             if not str(vol_id).isdigit():
@@ -381,13 +382,13 @@ def user_activity(request):
     db = mongo_util.get_db('mydb')
     for m in message:
         check_message = ""
-        vol_id = m["vol_ID"]
-        opp_id = m["opp_ID"]
-        vol_time = m["vol_Time"]
-        get_type = m["gettype"]
-        system_code = m["system_code"]
-        user_activity_id = m["_id"] = m["opp_ID"] + "_" + m["vol_ID"]
+        user_activity_id  = m["opp_ID"] + "_" + m["vol_ID"]
         try:
+            vol_id = m["vol_ID"]
+            opp_id = m["opp_ID"]
+            vol_time = m["vol_Time"]
+            get_type = m["gettype"]
+            system_code = m["system_code"]
             if not str(opp_id).isdigit():
                 check_message += "活动代码格式错误|"
             if not str(vol_id).isdigit():
