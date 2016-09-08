@@ -11,11 +11,13 @@ from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_POST
 from data_importer.utils import mongo_util
 from data_importer.utils import common
+from django.contrib.auth.models import User
 
 
 @login_required
 def index(request):
-    return render(request, 'index.html')
+    print request.user
+    return render(request, 'index.html', {'user': request.user})
 
 
 @require_POST
@@ -40,7 +42,6 @@ def user(request):
             vol_political = m['vol_political']
             vol_ethnicity = m['vol_ethnicity']
             vol_hour = m['vol_hour']
-
             vol_edu = m['vol_edu']
             vol_univercity = m['vol_univercity']
 

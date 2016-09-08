@@ -9,7 +9,7 @@
 
     <title>{% block title %}{% endblock %}</title>
 {% load static %}
-    <link rel="stylesheet" href="{% static 'lib/bootstrap/dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'lib/amazeui/dist/css/amazeui.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/app.css' %}">
 {% block myStyle %}{% endblock %}
 </head>
@@ -18,23 +18,44 @@
 <!-- No Baidu Siteapp-->
 <meta http-equiv="Cache-Control" content="no-siteapp"/>
 <body>
-<nav class="navbar navbar-default my-nav clearfix" role="navigation">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class=" sys-name" href="/">数据导入系统</a>
+<header class="am-topbar" id="header">
+  <h1 class="am-topbar-brand">
+    <a href="/">数据导入系统</a>
+  </h1>
+    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#doc-topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+  <div class="am-collapse am-topbar-collapse" id="doc-topbar-collapse">
+     <ul class="am-nav am-nav-pills am-topbar-nav">
+         <li><a href="/">首页</a></li>
+         <li><a href="#">志愿者管理</a></li>
+         <li><a href="#">机构管理</a></li>
+         <li><a href="#">活动管理</a></li>
+     </ul>
+
+      <div class="am-topbar-right">
+
+          <button onclick="window.open('/admin','_blank');"
+                  class="am-btn am-btn-warning am-topbar-btn am-btn-sm am-round"> <i class="am-icon-cog"></i>系统管理</button>
+      </div>
+    <div class="am-topbar-right">
+         <span class="user-welcome">欢迎，{% if user.first_name %}
+              {{ user.first_name }}
+           {% else %}
+               {{ user.username }}
+           {% endif %}/<a href="/logout" alt="退出">退出</a>
+           </span>
         </div>
-        <div>
-        </div>
-    </div>
-</nav>
-<div class="container-fluid my-content">
+  </div>
+</header>
+<div class="am-container-default content">
     {% block content %}{% endblock %}
 </div>
 {% block footer %}
-    <footer class="footer"><div class="container-fluid"><p class="text-muted">中青信投 2016</p></div></footer>
+    <footer class="footer"><div class="am-container-default">
+        <p class="text-muted">中青信投 2016</p></div>
+    </footer>
 {% endblock %}
 <script src="{% static 'lib/jquery/dist/jquery.min.js' %}"></script>
-<script src="{% static 'lib/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'lib/amazeui/dist/js/amazeui.min.js' %}"></script>
 {% block myScript %}{% endblock %}
 </body>
 </html>

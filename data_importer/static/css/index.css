@@ -5,4 +5,18 @@
   color: #ffffff;
   border-radius: 0 !important; }
 
+.masthead-content {
+  height: 300px;
+  padding-top: 60px; }
+
+.user-welcome {
+  display: inline-block;
+  font-size: 80%;
+  margin-top: 8px;
+  padding-top: 8px; }
+  .user-welcome > a {
+    color: yellow; }
+    .user-welcome > a:hover {
+      color: darkgray; }
+
 /*# sourceMappingURL=index.css.map */
