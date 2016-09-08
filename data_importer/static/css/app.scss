@@ -16,16 +16,36 @@
       &:hover{
         background: #79aec8;
         color: white;
+        &::after{
+          border-bottom: 7px solid #f5dd5d;
+        }
       }
     }
   }
 
 }
 
+.user-welcome{
+  display: inline-block;
+  font-size: 80%;
+  margin-top: 8px;
+  padding-top: 8px;
+  >a{
+    color: white;
+    &:hover{
+      color: #f5dd5d;
+    }
+  }
+}
+
 .footer{
-    color: #777;
-  padding: 30px 0;
+  color: #777;
+  margin-top: 20px;
+  padding: 10px 0;
   border-top: 1px solid #e5e5e5;
-  margin-top: 70px;
   text-align: center;
+  p{
+    line-height: 20px;
+    height: 20px;
+  }
 }
