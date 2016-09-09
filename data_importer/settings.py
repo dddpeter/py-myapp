@@ -137,6 +137,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "data_importer/static"),
 )
-TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR,  'data_importer/templates'),
-)
+#TEMPLATE_DIRS = (
+#    os.path.join(BASE_DIR,  'data_importer/templates'),
+#)

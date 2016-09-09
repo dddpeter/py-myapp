@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+import bson
 
 import pymongo
 import json
@@ -46,6 +47,20 @@ def get(db, collection_name, queryJson={}):
         return result_list
     else:
         return None
+
+
+def pagger(db, collection_name, query_json={}, page_size=10, page_num=1):
+    if is_json(query_json):
+        coll = db[collection_name]
+        count = coll.find(query_json).count()
+        result_list = coll.find(query_json).sort({'create_time': -1}).skip(page_num - 1).limit(page_size)
+        result = {}
+        result.append({"count": count, "pageSize": page_size,
+                       "pageNum": page_num, "list": result_list})
+        return result
+    else:
+        return None
+
 
 def clear_all_datas(db, collection_name):
     #清空一个集合中的所有数据

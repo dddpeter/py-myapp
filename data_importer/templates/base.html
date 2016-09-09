@@ -26,7 +26,7 @@
   <div class="am-collapse am-topbar-collapse" id="doc-topbar-collapse">
      <ul class="am-nav am-nav-pills am-topbar-nav">
          <li><a href="/">首页</a></li>
-         <li><a href="#">志愿者管理</a></li>
+         <li><a href="/user">志愿者管理</a></li>
          <li><a href="#">机构管理</a></li>
          <li><a href="#">活动管理</a></li>
      </ul>
@@ -34,14 +34,14 @@
       <div class="am-topbar-right">
 
           <button onclick="window.open('/admin','_blank');"
-                  class="am-btn am-btn-warning am-topbar-btn am-btn-sm am-round"> <i class="am-icon-cog"></i>系统管理</button>
+                  class="am-btn am-btn-secondary am-topbar-btn am-btn-sm"> <i class="am-icon-cog"></i>系统管理</button>
       </div>
     <div class="am-topbar-right">
          <span class="user-welcome">欢迎，{% if user.first_name %}
               {{ user.first_name }}
            {% else %}
                {{ user.username }}
-           {% endif %}/<a href="/logout" alt="退出">退出</a>
+           {% endif %}/<a href="/admin/logout" alt="退出">退出</a>
            </span>
         </div>
   </div>
@@ -51,7 +51,39 @@
 </div>
 {% block footer %}
     <footer class="footer">
-        <p>中青信投 2016</p>
+        <div class="am-container">
+            <div class="foot-item">
+                <h2>业务范围</h2>
+                <ul>
+                    <li>资产管理</li>
+                    <li>投资管理</li>
+                    <li>投资咨询</li>
+                    <li>项目投资</li>
+                </ul>
+            </div>
+            <div class="foot-item">
+                <h2>友情链接</h2>
+                <ul>
+                    <li><a href="">清华紫光</a></li>
+                    <li><a href="">中金数据</a></li>
+                </ul>
+            </div>
+            <div class="foot-item">
+                <h2>关于本站</h2>
+                <ul>
+                    <li>数据导入</li>
+                    <li>数据管理</li>
+                    <li>数据筛选</li>
+                </ul>
+            </div>
+             <div class="foot-item">
+                <h2>联系我们</h2>
+                <ul>
+                    <li>电子邮件：<br/><a href="mailto://dddpeter@126.com">dddpeter@126.com</a></li>
+                </ul>
+            </div>
+            <span>Copyright 2016 © 中青信投集团</span>
+        </div>
     </footer>
 {% endblock %}
 <script src="{% static 'lib/jquery/dist/jquery.min.js' %}"></script>

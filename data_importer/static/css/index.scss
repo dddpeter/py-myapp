@@ -1,15 +1,30 @@
 @import "vars";
 .masthead{
     text-align: center;
-    background-color: $theme_color ;
-    background-image: url("../img/hbg.jpg");
-    color: #ffffff;
+    background: $global-primary url("../img/hbg.jpg");
+    color: #000000;
     border-radius:0 !important;
+
+    height: 300px;
+  h1,h2{
+    margin: 0;
+  }
+  h1{
+    zoom:1.8
+  }
 }
 .masthead-content{
-  height:300px ;
-  padding-top: 60px;
+  padding:50px 0 0 200px;
+  text-align: left;
+   >.info{
+    display: inline-block;
+    height: 200px;
+    width: 25%;
+    margin: 20px 2.5%;
+    border-radius: 180px 0 0 180px;
+    -webkit-border-radius: 180px 180px;
+    -moz-border-radius: 180px 180px;
+    -o-border-radius: 180px  180px;
+    //box-shadow: grey 0 0 10px 2px;
 }
-.info{
-
 }

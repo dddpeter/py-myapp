@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% spaceless %}
+{% block title %}首页{% endblock %}
+
+{% block myStyle %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
+{% block content %}
+    <div class="am-container" style="padding: 20px 0">
+     <table class="am-table am-table-bordered">
+        <thead>
+        <th>ID</th>
+        <td>姓名</td>
+        <td>身份证号</td>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    </div>
+
+
+{% endblock %}
+{% block custom_script %}
+<script>
+   {% comment %}$(document).ready(function(){
+      jQuery.post('/json_test',JSON.stringify({a:100,b:2}),function(data){
+          console.log(data);
+       },'json');
+   });{% endcomment %}
+</script>
+{% endblock %}
+{% endspaceless %}

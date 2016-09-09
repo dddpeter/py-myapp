@@ -17,6 +17,7 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.contrib.auth import views
 from views import api_views
+from views import user
 
 urlpatterns = [
     # Front end
@@ -27,6 +28,9 @@ urlpatterns = [
     url(r'^api/activity$', api_views.activity, name='activity_import'),
     url(r'^api/user_activity$', api_views.user_activity, name='user_activity_import'),
     url(r'^api/user_organ$', api_views.user_organ, name='user_organ_import'),
+    #user
+    url(r'^user$', user.index, name='user'),
+    url(r'^user/list$', user.user_list, name='user'),
 
     # Administrator
     url(r'^admin/', admin.site.urls),

@@ -7,9 +7,11 @@
 body {
     margin: 0;
     padding: 0;
-    font-size: 14px;
-    font-family: "Roboto","Lucida Grande","DejaVu Sans","Bitstream Vera Sans",Verdana,Arial,sans-serif;
+    font-family: "Segoe UI","Lucida Grande",Helvetica,Arial,"Microsoft YaHei",FreeSans,Arimo,"Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3",FontAwesome,sans-serif;
     color: #333;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.6;
     background: #fff;
 }
 
@@ -440,7 +442,7 @@ select[multiple] {
 /* FORM BUTTONS */
 
 .button, input[type=submit], input[type=button], .submit-row input, a.button {
-    background: #79aec8;
+    background: #996699;
     padding: 10px 15px;
     border: none;
     border-radius: 4px;
@@ -466,13 +468,13 @@ a.button {
     float: right;
     border: none;
     font-weight: 400;
-    background: #417690;
+    background: #996699;
 }
 
 .button.default:active, input[type=submit].default:active,
 .button.default:focus, input[type=submit].default:focus,
 .button.default:hover, input[type=submit].default:hover {
-    background: #205067;
+    background: purple;
 }
 
 .button[disabled].default,
@@ -513,7 +515,7 @@ input[type=button][disabled].default {
     font-weight: 400;
     font-size: 13px;
     text-align: left;
-    background: #79aec8;
+    background:  #996699;
     color: #fff;
 }
 
@@ -637,7 +639,7 @@ div.system-message p.system-message-title {
 /* BREADCRUMBS */
 
 div.breadcrumbs {
-    background: #79aec8;
+    background: #996699;
     padding: 10px 40px;
     border: none;
     font-size: 14px;
@@ -816,8 +818,8 @@ table#change-history tbody th {
 #header {
     width: auto;
     height: 40px;
-    padding: 10px 40px;
-    background: #417690;
+    padding: 5px 40px;
+    background: purple;
     line-height: 40px;
     color: #ffc;
     overflow: hidden;
@@ -838,8 +840,8 @@ table#change-history tbody th {
 #branding h1 {
     padding: 0;
     margin: 0 20px 0 0;
-    font-weight: 300;
-    font-size: 24px;
+    font-weight: 900;
+    font-size: 1.2rem;
     color: #f5dd5d;
 }
 
@@ -876,8 +878,8 @@ table#change-history tbody th {
 
 #user-tools a:focus, #user-tools a:hover {
     text-decoration: none;
-    border-bottom-color: #79aec8;
-    color: #79aec8;
+    border-bottom-color: #996699;
+    color: #996699;
 }
 
 /* SIDEBAR */

@@ -11,7 +11,6 @@ from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_POST
 from data_importer.utils import mongo_util
 from data_importer.utils import common
-from django.contrib.auth.models import User
 
 
 @login_required

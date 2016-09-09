@@ -8,28 +8,35 @@
 {% endblock %}
 {% block content %}
     <div class="jumbotron masthead">
-      <div class="am-container-default masthead-content">
-        <h1>欢迎您访问本网站</h1>
-        <h2>志愿者信用数据导入</h2>
-        <p class="masthead-button-links">
-          <a class="am-btn am-btn-lg am-btn-success am-round"
-             href="" target="_blank" role="button">开始导入</a>
-        </p>
-        <ul class="masthead-links">
-        </ul>
-      </div>
+    <div class="am-container-default masthead-content">
+        <div class="am-u-sm-6">
+            <h1>志愿者数据管理系统(DIS)</h1>
+
+            <h2 style="color: purple">全国志愿者信用数据导入</h2>
+
+            <p class="masthead-button-links">
+                <a class="am-btn am-btn-lg am-btn-secondary"
+                   href="" target="_blank" role="button">开始导入</a>
+            </p>
+
+            <div>
+
+            </div>
+        </div>
+    <br/>
+    <br/>
+    <br/>
     </div>
-    <div class="info"></div>
-    <div class="info"></div>
-    <div class="info"></div>
+    </div>
+
 {% endblock %}
 {% block custom_script %}
 <script>
-   $(document).ready(function(){
+   {% comment %}$(document).ready(function(){
       jQuery.post('/json_test',JSON.stringify({a:100,b:2}),function(data){
           console.log(data);
        },'json');
-   });
+   });{% endcomment %}
 </script>
 {% endblock %}
 {% endspaceless %}

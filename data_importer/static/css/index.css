@@ -1,12 +1,25 @@
 .masthead {
   text-align: center;
-  background-color: #930784;
-  background-image: url("../img/hbg.jpg");
-  color: #ffffff;
-  border-radius: 0 !important; }
+  background: #0e90d2 url("../img/hbg.jpg");
+  color: #000000;
+  border-radius: 0 !important;
+  height: 300px; }
+  .masthead h1, .masthead h2 {
+    margin: 0; }
+  .masthead h1 {
+    zoom: 1.8; }
 
 .masthead-content {
-  height: 300px;
-  padding-top: 60px; }
+  padding: 50px 0 0 200px;
+  text-align: left; }
+  .masthead-content > .info {
+    display: inline-block;
+    height: 200px;
+    width: 25%;
+    margin: 20px 2.5%;
+    border-radius: 180px 0 0 180px;
+    -webkit-border-radius: 180px 180px;
+    -moz-border-radius: 180px 180px;
+    -o-border-radius: 180px  180px; }
 
 /*# sourceMappingURL=index.css.map */
